@@ -52,8 +52,8 @@ namespace Marcel.Pure.Co.UK
 
         public List<Dish> Sniff(string url)
         {
-            // "headless"
-            using (var browser = webDriverFactory.CreateInstance(BrowserEnum.Chrome))
+            // 
+            using (var browser = webDriverFactory.CreateInstance(BrowserEnum.Chrome, "headless"))
             {
                 return Sniff(url, browser);
             }
